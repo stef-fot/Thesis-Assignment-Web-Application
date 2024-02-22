@@ -3,42 +3,35 @@ This repository holds the source code for a web application developed as part of
 
 Technology Stack:
 
-Java (8+)
-Spring Framework (consider specifying Boot if applicable)
-MySQL Database
-JUnit Testing
-Eclipse IDE (mention alternatives if applicable)
+  Java (8+)
+  Spring Framework (consider specifying Boot if applicable)
+  MySQL Database
+  JUnit Testing
+  Eclipse IDE (mention alternatives if applicable)
 User Roles:
 
-Student: Browse projects, apply for them, view details, track progress.
+Student: Browse projects, apply for them, view details.
 Professor: Manage projects, receive applications, assign projects, provide feedback, set grades.
 Key Features:
 
-User registration and login with Spring Security
-List of available diploma thesis projects with details
-Application submission and management by students
-Project assignment and supervision tools for professors
-Grade calculation and feedback functionalities
-Current Status:
+  User registration and login with Spring Security
+  List of available diploma thesis projects with details
+  Application submission and management by students
+  Project assignment and supervision tools for professors
+  Grade calculation and feedback functionalities
 
-(Describe the current development stage)
 
 Getting Started:
 
-Clone the repository.
-Set up development environment (Java, IDE, database).
-Configure database connection details.
-Build and run the application.
-Contributing:
+  Clone the repository.
+  Set up development environment (Java, IDE, database).
+  Configure database connection details.
+  Build and run the application.
 
-(Provide instructions for contributing to the codebase)
 
-License:
-
-(Specify the license used for the project)
 
 Additional Notes:
 
-This project adheres to best practices for software development.
-Unit tests are included for code coverage and stability.
-Consider adding screenshots, diagrams, or documentation links for further clarity.
+  This project adheres to best practices for software development.
+  Unit tests are included for code coverage and stability.
+  Consider adding screenshots, diagrams, or documentation links for further clarity.
