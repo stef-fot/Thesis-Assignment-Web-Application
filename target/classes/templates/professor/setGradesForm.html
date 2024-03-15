@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades Directory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+	    <h3>Set Grades Form</h3>
+	    <hr>
+	    <p class="h4 mb-4">Give Grades For Thesis </p>
+	    <form th:action="@{/professor/assignThesisGrades}" method="POST">
+	        <input type="hidden" name="thesisId" th:value="${thesisId}">
+	        <input type="number" step="any" name="implementationGrade" class="form-control mb-4 col-4" placeholder="Enter grade for implementation">
+	        <input type="number" step="any" name="reportGrade" class="form-control mb-4 col-4" placeholder="Enter grade for report">
+	        <input type="number" step="any" name="presentationGrade" class="form-control mb-4 col-4" placeholder="Enter grade for presentation"> 
+	        <button type="submit" class="btn btn-info col-2">Save Grades</button>
+	    </form>
+	    <hr>
+	</div>
+</body>
+
+</html>

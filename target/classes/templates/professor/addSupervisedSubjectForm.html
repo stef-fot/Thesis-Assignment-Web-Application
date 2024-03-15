@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+	
+		<h3>Subject Info</h3>
+		<hr>
+		
+		<p class="h4 mb-4">Save Subject </p>
+
+		<form th:action="@{/professor/addSavedSubject}" th:object="${subject}" method="POST">
+		    <!-- Add hidden form field to handle update -->
+		    <input type="hidden" th:field="*{id}" />
+		    <input type="text" th:field="*{name}"  placeholder="Enter Subject Title">  <br/><br/>
+		    <input type="text" th:field="*{description}" placeholder="Enter Description">  <br/><br/>
+		    <input type="hidden" th:field="*{supervisor}" th:value="${professor}" />
+		    <button type="submit" class="btn btn-info col-2">Add Subject</button> 
+		</form>
+
+
+		<hr>
+	</div>
+</body>
+</html> 

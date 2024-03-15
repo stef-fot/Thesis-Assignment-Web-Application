@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+          crossorigin="anonymous">
+
+    <title>Profile page</title>
+</head>
+<body>
+<div sec:authorize="isAuthenticated()">
+	<!-- <input type="hidden" th:field="*{id}" />
+	<input type="hidden" th:field="*{userId}" /> -->
+    <h4>Fullname: <span th:text="${student.fullName}"></span></h4>
+    <h4>Year Of Studies: <span th:text="${student.yearOfStudies}"></span></h4>
+    <h4>Currrent Average Grade: <span th:text="${student.currentAverageGrade}"></span></h4>
+    <h4>Remaining Courses For Graduation: <span th:text="${student.remainingCoursesForGraduation}"></span></h4>
+    <hr>
+    <a th:href="@{/student/dashboard}" class="btn btn-primary">Back to Dashboard</a>
+</div>
+</body>
+</html>
