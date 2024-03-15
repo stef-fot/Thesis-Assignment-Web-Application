@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<html>
+<head>
+  <title>Subject List</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+ 
+    <div class="container">
+
+	<h3>Student Directory</h3>
+	
+	<hr>
+	<!-- Back to homepage -->
+	<a th:href="@{/student/homepage(testModelAttr=${test})}"
+		class="btn btn-primary btn-sm mb-3">
+		Back to homepage
+	</a>
+	<!-- EditProfile button -->
+	<a th:href="@{/student/editProfile(testModelAttr=${test})}"
+		class="btn btn-primary btn-sm mb-3">
+		Edit Profile
+	</a> 
+	<table class="table table-bordered table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>Title</th>
+				<th>Description</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="tempSubject : ${subjects}">
+			
+				<td th:text="${tempSubject.name}" />	
+				<td th:text="${tempSubject.description}" />	
+
+				
+				<td>
+					<!-- Add "apply" button/link -->
+					<a th:href="@{/student/apply(subject_id=${tempSubject.id})}"
+					   class="btn btn-info btn-sm">
+						Apply
+					</a>
+					<!-- Add "see details" button/link -->
+					<a th:href="@{/student/details(subject_id=${tempSubject.id})}" class="btn btn-primary btn-sm">
+						See Details
+					</a>
+
+				</td>
+				
+				
+			</tr>
+		</tbody>		
+	</table>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+          crossorigin="anonymous">
+
+    <title>Subject Details</title>
+</head>
+<body>
+<h1>Subject Details</h1>
+
+<div sec:authorize="isAuthenticated()">
+<h4>Title: <span th:text="${subjectDetails.title}"></span></h4>
+	<h4>Objectives: <span th:text="${subjectDetails.objectives}"></span></h4>
+	<h4>Supervisor: <span th:text="${subjectDetails.supervisor}"></span></h4>
+    </h4>
+	<hr>
+	<a th:href="@{/student/dashboard}" class="btn btn-primary">Back to Dashboard</a>
+</div>
+</body>
+</html>

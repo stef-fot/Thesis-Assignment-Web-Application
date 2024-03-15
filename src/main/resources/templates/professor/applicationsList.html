@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Applications List</title>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Applications List</h3>
+        <hr>
+        <h4>Subject: <span th:text="${subjectId}"></span></h4>
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Applicant Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="app : ${applications}">
+                    <td th:text="${app.applicant.fullName}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <a th:href="@{/professor/dashboard}" class="btn btn-primary col-2"> Professor Dashboard</a>
+    </div>
+
+    <!-- Link to Bootstrap JS (optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gmoub7SM6nGz8HScj4R80p/8+QFb8l7y5h6" crossorigin="anonymous"></script>
+</body>
+
+
+</html>

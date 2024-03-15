@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threshold Directory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+	    <h3>Threshold Form</h3>
+	    <hr>
+	    <p class="h4 mb-4">Give Thresholds For Subject </p>
+	    <form th:action="@{/professor/assignThresholds}" method="POST">
+	        <input type="hidden" name="subject_id" th:value="${subjectId}">
+	        <input type="number" step="any" name="Th1" class="form-control mb-4 col-4" placeholder="Enter Threshold for AvgGrade">
+	        <input type="number" name="Th2" class="form-control mb-4 col-4" placeholder="Enter Threshold for Remaining Courses">
+	        <button type="submit" class="btn btn-info col-2">Save Thresholds</button>
+	    </form>
+	    <hr>
+	</div>
+</body>
+
+</html>
